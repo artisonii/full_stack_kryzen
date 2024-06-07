@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { connection } = require("./configs/db");
+// const { connection } = require("./configs/db");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, async () => {
   try {
-    await connection;
+    // await connection;
     console.log("DB is connected");
   } catch (error) {
     console.log("Error while connecting to db");
