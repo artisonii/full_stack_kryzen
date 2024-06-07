@@ -1,2 +1,3 @@
-export const serverUrl =
-  process.env.REACT_APP_SERVER_URL || "http://localhost:8080";
+const env = import.meta.env;
+
+export const serverUrl = env.VITE_SERVER_URL || "http://localhost:8080";
